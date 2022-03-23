@@ -10,12 +10,76 @@ The icon-menu can be used to group clickable icons together.
 
 Our site-menu was built to be used in the header as a main site navigation. It contains the standard look and structure of a site-menu. 
 You can customize a site-menu in a few ways:
- - Add a [background-color](/docs/menus/menu/#background-color)
- - Add [borders](/docs/menus/menu/#bordered) separating menu items
- - Add an [underline on hover](/docs/menus/menu/#hover-underline) to menu items
- - Use a [dropdown](/docs/menus/menu/#dropdown) in your menu
+ - Add a background color. This will accomplish two things. First, the background color of your
+   menu will change. Second, the hover effect on the links in the menu will reflect a darker version of the background color 
+   you set. The color of the links will also change based on the color of the site-menu. If the color is dark, the link color 
+   will be white. If the background color is a lighter color, the link color will be `var(--dark)`. Which is currently set to
+   the body color. If you want your site-menu to have a background-color without the inherit hover effects, just wrap the <code>site-menu</code> in an element with a <code>background-{color}</code> class. The site-menu and dropdowns will inherit background colors from their parents.
+ - Add borders. The modifier class of `site-menu--bordered` will add borders separating each menu item.
+ - Adding the class `hover-underline` to your `site-menu` will give the `<button>`s in the menu a bottom border on hover. You can change the color of your border hovers by adding the modifier of <code>hover-underline--{color}</code>.
+ - Use a dropdown in your menu. The markup for this component is pretty specific. Be sure to include the following classes.
+You will need a `dropdown` class wrapping two sibling elements, a `dropdown__trigger` and your `dropdown__content`.
+ - You can also make it responsive! To make the site-menu work on smaller (mobile) devices, you need to make a few additions. First, be sure to wrap the menu using
+`site-menu-wrapper`. This is essentially a relative positioned container that the menu can be attached to. From here, all you need is 
+to add the button to open the menu. Use the class `site-menu-mobile-action` to toggle the menu. The button simply toggles the menu, so you'll want to add an icon inside. You can use our `pi-menu` here to take advantage of the standard "hamburger menu." 
+Since this button is outside of the `site-menu`, be sure to add the approriate color to it. For example, if you have a navy background you would 
+probably want to add `text-white` to the button. Add the button before the `site-menu` as a sibling. Both the `site-menu-mobile-action` and `site-menu` need to be children of the 
+`site-menu-wrapper` for things to work properly. 
 
-You can also make it [responsive!](/docs/menus/menu/#responsive)
+<div class="linear-gradient inverted px-4 py-3 mt-4 block-container" 
+      data-callout-header="tables tip" 
+      data-callout-radius="0 3rem 0 3rem"
+      data-gradient-direction="30deg"
+      data-gradient-start="midnightblue 20%, purple 40%"
+      data-gradient-stop="indigo"
+      data-gradient-fallback="indigo">
+  <i class="pi-rocket mr-1"></i>
+  <strong class="mr-1">Try it!</strong> 
+  Click the buttons below to see the different ways you can customize a site menu!
+</div>
+
+<div class="menu-visualizer block-container p-3 py-4 border border--color-lighter border--width-5 tablet-up-2 mb-4">
+  <div class="actions block h-10">
+    <ul class="list">
+      <li>
+        <button class="button button--purple" data-class="background-navy">
+          <pre>Background color</pre>
+        </button>
+      </li>
+      <li>
+        <button class="button button--purple" data-class="site-menu--bordered">
+          <pre>Bordered menu</pre>
+        </button>
+      </li>
+      <li>
+        <button class="button button--purple" data-class="hover-underline">
+          <pre>Underline on hover</pre>
+        </button>
+      </li>
+      <li>
+        <button class="button button--purple" data-childclass="flex--align-baseline">
+          <pre>Dropdowns</pre>
+        </button>
+      </li>
+      <li>
+        <button class="button button--purple" data-childclass="flex--align-baseline">
+          <pre>Responsive</pre>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="block results p-2 border border--width-3">
+    <div class="flex flex--justify-center">
+      <nav class="site-menu transition">
+        <a href="#" class="site-menu__item">Item 1</a>
+        <a href="#" class="site-menu__item">Item 2</a>
+        <a href="#" class="site-menu__item">Item 3</a>
+        <a href="#" class="site-menu__item">Item 4</a>
+        <a href="#" class="site-menu__item">Item 5</a>
+      </nav>
+    </div>
+  </div>
+</div>
 
 <nav class="site-menu">
   <a href="#" class="site-menu__item">Item 1</a>
