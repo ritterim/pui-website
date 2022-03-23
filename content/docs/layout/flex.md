@@ -30,22 +30,22 @@ Sets the flex container to align all contained elements to either the start, cen
   <div class="actions block h-10">
     <ul class="list">
       <li>
-        <button class="button button--purple" data-class="flex--align-start">
+        <button class="button button--purple button--purple-focus" data-class="flex--align-start">
           <pre>.flex--align-start</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple" data-class="flex--align-center">
+        <button class="button button--purple button--purple-focus" data-class="flex--align-center">
           <pre>.flex--align-center</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple" data-class="flex--align-end">
+        <button class="button button--purple button--purple-focus" data-class="flex--align-end">
           <pre>.flex--align-end</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple" data-childclass="flex--align-baseline">
+        <button class="button button--purple button--purple-focus" data-childclass="flex--align-baseline">
           <pre>.flex--align-baseline</pre>
         </button>
       </li>
@@ -83,22 +83,22 @@ Sets individual elements to align to either the start, center, end, or baseline 
   <div class="actions block h-10">
     <ul class="list">
       <li class="mr-2 mb-2">
-        <button class="button button--purple" data-childclass="flex--align-self-start">
+        <button class="button button--purple button--purple-focus" data-childclass="flex--align-self-start">
           <pre>.flex--align-self-start</pre>
         </button>
       </li>
       <li class="mr-2 mb-2">
-        <button class="button button--purple" data-childclass="flex--align-self-center">
+        <button class="button button--purple button--purple-focus" data-childclass="flex--align-self-center">
           <pre>.flex--align-self-center</pre>
         </button>
       </li>
       <li class="mr-2 mb-2">
-        <button class="button button--purple" data-childclass="flex--align-self-end">
+        <button class="button button--purple button--purple-focus" data-childclass="flex--align-self-end">
           <pre>.flex--align-self-end</pre>
         </button>
       </li>
       <li class="mr-2 mb-2">
-        <button class="button button--purple" data-childclass="flex--align-self-baseline">
+        <button class="button button--purple button--purple-focus" data-childclass="flex--align-self-baseline">
           <pre>.flex--align-self-baseline</pre>
         </button>
       </li>
@@ -136,27 +136,27 @@ Sets individual elements to align to either the start, center, end, or baseline 
   <div class="actions block h-10">
     <ul class="list">
       <li>
-        <button class="button button--purple " data-class="flex--justify-start">
+        <button class="button button--purple button--purple-focus " data-class="flex--justify-start">
           <pre>.flex--justify-start</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple " data-class="flex--justify-center">
+        <button class="button button--purple button--purple-focus " data-class="flex--justify-center">
           <pre>.flex--justify-center</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple " data-class="flex--justify-end">
+        <button class="button button--purple button--purple-focus " data-class="flex--justify-end">
           <pre>.flex--justify-end</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple " data-children="3" data-class="flex--justify-around">
+        <button class="button button--purple button--purple-focus " data-children="3" data-class="flex--justify-around">
           <pre>.flex--justify-around</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple " data-children="3" data-class="flex--justify-between">
+        <button class="button button--purple button--purple-focus " data-children="3" data-class="flex--justify-between">
           <pre>.flex--justify-between</pre>
         </button>
       </li>
@@ -195,22 +195,22 @@ Utility classes to handle the direction of elements within a flex container.
   <div class="actions block h-10">
     <ul class="list">
       <li>
-        <button class="button button--purple" data-children="3">
+        <button class="button button--purple button--purple-focus" data-children="3">
           <pre>Default</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple" data-children="3" data-class="flex--row-reverse">
+        <button class="button button--purple button--purple-focus" data-children="3" data-class="flex--row-reverse">
           <pre>.flex--row-reverse</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple" data-children="3" data-class="flex--column">
+        <button class="button button--purple button--purple-focus" data-children="3" data-class="flex--column">
           <pre>.flex--column</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple" data-children="3" data-class="flex--column-reverse">
+        <button class="button button--purple button--purple-focus" data-children="3" data-class="flex--column-reverse">
           <pre>.flex--column-reverse</pre>
         </button>
       </li>
@@ -250,22 +250,22 @@ Utility classes to handle wrapping, spacing, and centering of content within a f
   <div class="actions block h-10">
     <ul class="list">
       <li>
-        <button class="button button--purple " data-children="20" data-class="flex--nowrap">
+        <button class="button button--purple button--purple-focus " data-children="20" data-class="flex--nowrap">
           <pre>.flex--no-wrap</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple " data-children="20" data-class="flex--wrap">
+        <button class="button button--purple button--purple-focus " data-children="20" data-class="flex--wrap">
           <pre>.flex--wrap</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple " data-children="3" data-childclass="flex--grow">
+        <button class="button button--purple button--purple-focus " data-children="3" data-childclass="flex--grow">
           <pre>.flex--grow</pre>
         </button>
       </li>
       <li>
-        <button class="button button--purple " data-children="1" data-class="flex--center-content">
+        <button class="button button--purple button--purple-focus " data-children="1" data-class="flex--center-content">
           <pre>.flex--center-content</pre>
         </button>
       </li>

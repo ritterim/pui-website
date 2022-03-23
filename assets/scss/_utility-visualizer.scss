@@ -11,8 +11,10 @@
     background: var(--light-purple);
     color:white;
   }
-  &:focus{
-    background: var(--purple);
-    color:white;
+  &-focus {
+    &:focus{
+      background: var(--purple);
+      color:white;
+    }
   }
 }

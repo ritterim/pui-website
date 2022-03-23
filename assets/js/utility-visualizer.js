@@ -1,5 +1,6 @@
 // Get All Visualizers
 const visualizers = document.querySelectorAll('.visualizer');
+const menuVisualizers = document.querySelectorAll('.menu-visualizer');
 
 // Check if there are any visualizers
 if (visualizers) {
@@ -25,7 +26,7 @@ if (visualizers) {
         examples.forEach((example) => {
           example.innerHTML = null;
 
-          // determines how many example child elements to display, will always display at least one
+          // Determines how many example child elements to display, will always display at least one
           if (btn.dataset.children) {
             for (i = 0; i < btn.dataset.children; i++) {
               example.appendChild(exampleEl(btn.dataset.childclass));
@@ -34,7 +35,7 @@ if (visualizers) {
             example.appendChild(exampleEl(btn.dataset.childclass));
           }
 
-          // sets a class on the parent element
+          // Sets a class on the parent element
           if (btn.dataset.class) {
             example.classList = [
               'example',
@@ -50,7 +51,7 @@ if (visualizers) {
   });
 }
 
-// creates the child class elements
+// Creates the child class elements
 const exampleEl = (childClasses) => {
   const el = document.createElement('div');
   const classes =
@@ -59,3 +60,26 @@ const exampleEl = (childClasses) => {
 
   return el;
 };
+
+// Check if there are any menu visualizers
+if (menuVisualizers) {
+  // Setup each visualizer
+  menuVisualizers.forEach((visualizer) => {
+    // Grab actions and results panels
+    const actions = visualizer.querySelector('.actions');
+    const results = visualizer.querySelector('.results');
+
+    // Grab all the buttons elements in action section
+    const actionBtns = actions.querySelectorAll('.button');
+
+    // Make buttons clickable, applies the buttons `data-class` attribute to the example
+    actionBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        let btnClasses = ['background-purple', 'text-white'];
+        btnClasses.forEach(btnClass => btn.classList.toggle(btnClass));
+        const menuSandbox  = results.querySelector('.site-menu');
+        menuSandbox.classList.toggle(btn.dataset.class);
+      });
+    });
+  })
+}
