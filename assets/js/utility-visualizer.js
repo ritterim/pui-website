@@ -1,3 +1,5 @@
+lexers = require('@babel/highlight');
+
 // Get All Visualizers
 const visualizers = document.querySelectorAll('.visualizer');
 const menuVisualizers = document.querySelectorAll('.menu-visualizer');
@@ -75,10 +77,21 @@ if (menuVisualizers) {
     // Make buttons clickable, applies the buttons `data-class` attribute to the example
     actionBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
+        // Apply styling to button while clicked
         let btnClasses = ['background-purple', 'text-white'];
         btnClasses.forEach(btnClass => btn.classList.toggle(btnClass));
+
+        // Grab menu sandbox and code block
         const menuSandbox  = results.querySelector('.site-menu');
+        const menuCodeBlock = document.querySelector('#menu-visualizer-code-block').querySelector('pre');
+        const codeToBeRemoved = menuCodeBlock.querySelector('code');
+
+        // Set classes on sandbox and code block
         menuSandbox.classList.toggle(btn.dataset.class);
+        let code = document.createElement('code');
+        code.innerHTML = menuSandbox.outerHTML
+        menuCodeBlock.replaceChild(code, codeToBeRemoved);
+        const lexer = lexers.Get("html");
       });
     });
   })

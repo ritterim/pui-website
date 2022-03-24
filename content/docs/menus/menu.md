@@ -81,15 +81,7 @@ probably want to add `text-white` to the button. Add the button before the `site
   </div>
 </div>
 
-<nav class="site-menu">
-  <a href="#" class="site-menu__item">Item 1</a>
-  <a href="#" class="site-menu__item">Item 2</a>
-  <a href="#" class="site-menu__item">Item 3</a>
-  <a href="#" class="site-menu__item">Item 4</a>
-  <a href="#" class="site-menu__item">Item 5</a>
-</nav>
-
-<div class="mt-3 mb-4">
+<div id="menu-visualizer-code-block" class="mt-3 mb-4">
 {{< highlight html >}}
 <nav class="site-menu">
   <a href="#" class="site-menu__item">Item 1</a>
