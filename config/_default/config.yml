@@ -35,9 +35,9 @@ menu:
     name: Docs
     url: /docs/getting-started/get-started/
     weight: 1
-  - identifier: examples
-    name: Examples
-    url: /examples/
+  - identifier: gallery
+    name: Gallery
+    url: /gallery/components
 
 params:
   rim: Ritter Insurance Marketing
