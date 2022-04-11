@@ -1,13 +1,10 @@
 ---
-title: Menu
+title: Site Menu
+weight: 1
 ---
 
-Below you will find documentation and examples for our [site-menu](/docs/menus/menu/#site-menu) and [icon-menu](/docs/menus/menu/#icon-menu). The site-menu works well as the main navigation for your site. 
-The icon-menu can be used to group clickable icons together.
+Our site-menu was built to be used in the header as a main site navigation. It contains the standard look and structure of a site-menu. If you have a logo that links to your home page, wrap that in an `a` tag with the class `site-logo`.
 
-## Site Menu
-
-Our site-menu was built to be used in the header as a main site navigation. It contains the standard look and structure of a site-menu. 
 You can customize a site-menu in a few ways:
  - Add a [background-color](/docs/menus/menu/#background-color)
  - Add [borders](/docs/menus/menu/#bordered) separating menu items
@@ -35,127 +32,6 @@ You can also make it [responsive!](/docs/menus/menu/#responsive)
 </nav>
 {{< /highlight >}}
 </div>
-
-
-## Background Color
-
-You can add a background color to your `site-menu`. This will accomplish two things. First, the background color of your
-menu will change. Second, the hover effect on the links in the menu will reflect a darker version of the background color 
-you set. The color of the links will also change based on the color of the site-menu. If the color is dark, the link color 
-will be white. If the background color is a lighter color, the link color will be `var(--dark)`. Which is currently set to
-the body color.
-
-We built the site-menu to be light and to adapt to your needs. It does not come with a background color set. However, the site-menu will inherit 
-its parent background-colors. You can read more about this below in the documentation.
-
-<div class="message message--warning mb-3" data-header="">
-  <p>If you want your site-menu to have a background-color without the inherit hover effects, just wrap the <code>site-menu</code> in an element with a <code>background-{color}</code> class. The site-menu and dropdowns will inherit background colors from their parents.</p>
-</div>
-
-<nav class="site-menu background--navy">
-  <a href="#" class="site-menu__item text-hover--white">Item 1</a>
-  <a href="#" class="site-menu__item text-hover--white">Item 2</a>
-  <a href="#" class="site-menu__item text-hover--white">Item 3</a>
-  <a href="#" class="site-menu__item text-hover--white">Item 4</a>
-  <a href="#" class="site-menu__item text-hover--white">Item 5</a>
-</nav>
-<nav class="mt-4 site-menu background--lighter">
-  <a href="#" class="site-menu__item">Item 1</a>
-  <a href="#" class="site-menu__item">Item 2</a>
-  <a href="#" class="site-menu__item">Item 3</a>
-  <a href="#" class="site-menu__item">Item 4</a>
-  <a href="#" class="site-menu__item">Item 5</a>
-</nav>
-
-<div class="mt-3 mb-4">
-{{< highlight html >}}
-<nav class="site-menu background--navy">
-  <a href="#" class="site-menu__item">Item 1</a>
-  <a href="#" class="site-menu__item">Item 2</a>
-  <a href="#" class="site-menu__item">Item 3</a>
-  <a href="#" class="site-menu__item">Item 4</a>
-  <a href="#" class="site-menu__item">Item 5</a>
-</nav>
-<nav class="mt-4 site-menu background--lighter">
-  <a href="#" class="site-menu__item">Item 1</a>
-  <a href="#" class="site-menu__item">Item 2</a>
-  <a href="#" class="site-menu__item">Item 3</a>
-  <a href="#" class="site-menu__item">Item 4</a>
-  <a href="#" class="site-menu__item">Item 5</a>
-</nav>
-{{< /highlight >}}
-</div>
-
-
-## Bordered
-
-Adding the modifier class of `site-menu--bordered` will add borders separating each menu item.
-
-<nav class="site-menu site-menu--bordered">
-  <a href="#" class="site-menu__item">Item 1</a>
-  <a href="#" class="site-menu__item">Item 2</a>
-  <a href="#" class="site-menu__item">Item 3</a>
-  <a href="#" class="site-menu__item">Item 4</a>
-  <a href="#" class="site-menu__item">Item 5</a>
-</nav>
-
-
-<div class="mt-3 mb-4">
-{{< highlight html >}}
-<nav class="site-menu site-menu--bordered">
-  <a href="#" class="site-menu__item">Item 1</a>
-  <a href="#" class="site-menu__item">Item 2</a>
-  <a href="#" class="site-menu__item">Item 3</a>
-  <a href="#" class="site-menu__item">Item 4</a>
-  <a href="#" class="site-menu__item">Item 5</a>
-</nav>
-{{< /highlight >}}
-</div>
-
-
-## Hover Underline
-
-Adding the class `hover-underline` to your `site-menu` will give the `<button>`s in the menu a bottom border on hover.
-
-<div class="message message--warning mb-3" data-header="">
-  <p class="mt-0">You can change the color of your border hovers by adding the modifier of <code>hover-underline--{color}</code>.</p>
-</div>
-
-<nav class="site-menu hover-underline">
-  <a href="#" class="site-menu__item">Item 1</a>
-  <a href="#" class="site-menu__item">Item 2</a>
-  <a href="#" class="site-menu__item">Item 3</a>
-  <a href="#" class="site-menu__item">Item 4</a>
-  <a href="#" class="site-menu__item">Item 5</a>
-</nav>
-<div class="my-3"></div>
-<nav class="site-menu hover-underline hover-underline--med-blue">
-  <a href="#" class="site-menu__item">Item 1</a>
-  <a href="#" class="site-menu__item">Item 2</a>
-  <a href="#" class="site-menu__item">Item 3</a>
-  <a href="#" class="site-menu__item">Item 4</a>
-  <a href="#" class="site-menu__item">Item 5</a>
-</nav>
-
-<div class="mt-3 mb-4">
-{{< highlight html >}}
-<nav class="site-menu hover-underline">
-  <a href="#" class="site-menu__item">Item 1</a>
-  <a href="#" class="site-menu__item">Item 2</a>
-  <a href="#" class="site-menu__item">Item 3</a>
-  <a href="#" class="site-menu__item">Item 4</a>
-  <a href="#" class="site-menu__item">Item 5</a>
-</nav>
-<nav class="site-menu hover-underline hover-underline--med-blue">
-  <a href="#" class="site-menu__item">Item 1</a>
-  <a href="#" class="site-menu__item">Item 2</a>
-  <a href="#" class="site-menu__item">Item 3</a>
-  <a href="#" class="site-menu__item">Item 4</a>
-  <a href="#" class="site-menu__item">Item 5</a>
-</nav>
-{{< /highlight >}}
-</div>
-
 
 ## Dropdown
 
@@ -553,7 +429,7 @@ You can see if you scale your screen down.
 We wrapped the site-menu in `site-menu-wrapper`. This ensures the proper position is applied to the wrapper and allows 
 the responsive menu to function properly. 
 
-If you have a logo that links to your home page, wrap that in an `a` tag with the class `site-logo`.
+
 
 Notice that this header has a navy background. You can add a background color to the site-menu and it will handle all of the text colors
 and hovers. The dropdown menu will also work with this color. But this is separate from the rest of the header. So in this case we add 
@@ -621,108 +497,8 @@ want it breaking and "hanging off" the menu. Using the `dropdown--right` modifie
 {{< /highlight >}}
 </div>
 
- 
-## Icon Menu
-
-When you need a horizontal list of icons, look no further than "Icon Menu". Use the mark up below
-to get the list you want. Be sure to use the specific `icon-menu` classes. With this strcuture you have
-the freedom to use any icon you want and make that icon change to whatever color you want on hover.
-Simpy change the `<icon>` class to the desired font-awesome icon you want. Then, add the `text-hover--{color}`
-class to the `icon-menu__action`. To see a list of available hover colors [click here](/docs/typography/typography/#color).
-
-In the example below, we're using `<a>`s on the `icon-menu__action` to build the menus. You could use a `<button>` to improve accessibility
-depending on exactly what you need. If you're going to use a button, be sure to add the class `button--plain`. This will remove the browser defaults and allow the icon to display on its own. If you use a less semantic element like `<div>`, we would recommend adding `role="button"`.
-
-Adding `icon-menu icon-menu--vertical` creates a vertical icon menu.
-
-| <i class="fpi-warning text--orange"></i> Be sure to always wrap the font icon in another element. We don't want to have the click event be on the icon itself.|
-| ---
-
-You can add as many icons as you'd like.
-
-<div class="icon-menu">
-  <div class="icon-menu__item">
-    <button class="icon-menu__action text-hover--negative button--plain">
-      <i class="pi-trash" aria-hidden="hidden"></i>
-    </button>
-  </div>
-  <div class="icon-menu__item">
-    <a href="#" class="icon-menu__action text-hover-positive">
-      <i class="pi-edit" aria-hidden="hidden"></i>
-    </a>
-  </div>
-  <div class="icon-menu__item">
-    <a href="#" class="icon-menu__action text-hover--red">
-      <i class="pi-clock" aria-hidden="hidden"></i>
-    </a>
-  </div>
-</div>
-<div class="icon-menu icon-menu--vertical">
-  <div class="icon-menu__item">
-    <a href="#" class="icon-menu__action text-hover--negative">
-      <i class="pi-trash" aria-hidden="hidden"></i>
-    </a>
-  </div>
-  <div class="icon-menu__item">
-    <a href="#" class="icon-menu__action text--positive">
-      <i class="pi-edit" aria-hidden="hidden"></i>
-    </a>
-  </div>
-</div>
-
-<div class="mt-3 mb-4">
-{{< highlight html >}}
-<!-- Horizontal Icon Menu -->
-<div class="icon-menu">
-  <div class="icon-menu__item">
-    <button class="icon-menu__action text-hover--negative button--plain">
-      <i class="pi-trash" aria-hidden="hidden"></i>
-    </button>
-  </div>
-  <div class="icon-menu__item">
-    <a href="#" class="icon-menu__action text-hover--positive">
-      <i class="pi-edit" aria-hidden="hidden"></i>
-    </a>
-  </div>
-  <div class="icon-menu__item">
-    <a href="#" class="icon-menu__action text-hover--red">
-      <i class="pi-clock" aria-hidden="hidden"></i>
-    </a>
-  </div>
-</div>
-
- <!-- Vertical Icon Menu -->
-<div class="icon-menu icon-menu--vertical">
-  <div class="icon-menu__item">
-    <button class="icon-menu__action text-hover--negative button--plain">
-      <i class="pi-trash" aria-hidden="hidden"></i>
-    </button>
-  </div>
-  <div class="icon-menu__item">
-    <a href="#" class="icon-menu__action text-hover--positive">
-      <i class="pi-edit" aria-hidden="hidden"></i>
-    </a>
-  </div>
-</div>
-{{< /highlight >}}
-</div>
-
-
-## Fixed Header
+## Fixed 
 
 To get a fixed header, you can set the desired height in the config file. The `site-header` needs the modifier, `site-header--fixed`. This is what gives the header the `position: fixed` style.
 In order to ensure that you have proper space between your header and main content, add the class `header-fixed` to the direct sibling of your `site-header`.
-We use this in this styleguide.
 
-Your code could look something like this:
-
-<div class="mt-3 mb-4">
-{{< highlight html >}}
-<header class="site-header site-header--fixed">
-  Header Content Here
-</header>
-<main class="header-fixed">
-  Main content here
-</main>
-{{< /highlight >}}
-</div>
