@@ -39,9 +39,9 @@ menu:
     name: Icons
     url: /icons/
     weight: 2
-  - identifier: launch-pad
-    name: Launch Pad
-    url: /launch-pad/components
+  - identifier: launchpad
+    name: Launchpad
+    url: /launchpad/components
 
 params:
   gtmID: 
