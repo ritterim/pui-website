@@ -193,7 +193,7 @@ body {
         <div class="card__content text--center flex flex--column flex--justify-center h-100">
           <strong class="text--size-xl text-positive">74 <span>&#176;</span> F</strong>
           <p class="text--white">Cabin Temperature</p>
-          <strong class="text--size-xl text-negative">14 PSI</strong>
+          <strong class="text--size-xl text--beige">14 PSI</strong>
           <p class="text--white">Cabin Pressure</p>
         </div>
       </div>
