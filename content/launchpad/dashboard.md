@@ -244,7 +244,7 @@ body {
             <p>Critical system malfunction!</p>
           </div>
           <div class="message message--success text--left">
-            <p>Starship Enterprise has entered into orbit.</p>
+            <p>The Eagle has landed.</p>
           </div>
         </div>
       </div>
