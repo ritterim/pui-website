@@ -45,7 +45,13 @@ body {
     <div class="block tablet-up-6 laptop-up-3 desktop-up-2">
       <div class="card background--med-blue border--color-black border--width-3 rounded-3">
         <div class="card__content">
-          <div class="flex flex--align-center mb-3">
+          <div class="card__header flex--justify-center border-b border--color-white pb-1">
+            <div class="card__group text--white">
+              <i class="pi-info-solid text--white"></i>
+              <h2 class="card__title text--white">System Health</h2>
+            </div>
+          </div>
+          <div class="flex flex--align-center">
             <i class="pi-plus-circle-solid rotate-45 pi-xl mr-3 text-negative"></i>
             <span class="text--white">All Systems Check</span>
           </div>
@@ -65,19 +71,15 @@ body {
             <i class="pi-warning pi-xl mr-3 text-warning"></i>
             <span class="text--white">Stage 1 Pressurization Systems</span>
           </div>
-          <div class="flex flex--align-center my-3">
+          <div class="flex flex--align-center">
             <i class="pi-check-circle-solid pi-xl mr-3 text-positive"></i>
             <span class="text--white">Engine Controls</span>
-          </div>
-          <div class="flex flex--align-center mt-3">
-            <i class="pi-check-circle-solid pi-xl mr-3 text-positive"></i>
-            <span class="text--white">Fin Control Actuation</span>
           </div>
         </div>
       </div>
     </div>
     <div class="block tablet-up-6 laptop-up-6 desktop-up-8">
-      <div class="card background--med-blue border--color-black border--width-3 p-0">
+      <div class="card background--med-blue border--color-black border--width-3 p-0 rounded-3">
         <div class="card__content">
           <table class="table">
             <thead>
@@ -182,9 +184,6 @@ body {
           </div>
           <div class="flex flex--align-center my-3">
             <span class="text--white">Sunspots: 61</span>
-          </div>
-          <div class="flex flex--align-center my-3">
-            <span class="text--white">Solar activity: B3.35</span>
           </div>
         </div>
       </div>
