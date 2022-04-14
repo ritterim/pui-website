@@ -12,8 +12,8 @@ body {
 </style>
 
 
-<div class="px-4 py-4">
-  <h1 class="text--center text--black mb-3">
+<div class="px-4 py-3">
+  <h1 class="text--center text--black my-3">
     Dashboard
   </h1>
   <div class="block-container cards blocks px-2 pb-3">
