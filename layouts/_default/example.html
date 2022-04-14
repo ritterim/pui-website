@@ -15,7 +15,11 @@
     />
     {{ if .Page.Params.SkellyCSS }}
     <link rel="stylesheet" href="https://unpkg.com/@ritterim/skellycss/dist/style.css">
-    {{ end }}  
+    {{ end }}
+    {{ if .Page.Params.Chartist }}
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    {{ end }}
   </head>
   <body>
     {{ block "main" . }} 
