@@ -27,7 +27,7 @@ body {
     <div class="block tablet-up-6 laptop-up-6 desktop-up-8">
       <div class="card p-0 rounded-3 no-border">
         <div class="card__content">
-          <div class="ct-chart">
+          <div class="ct-chart"></div>
         </div>
       </div>
     </div>
