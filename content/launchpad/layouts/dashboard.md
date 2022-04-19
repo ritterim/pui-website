@@ -54,7 +54,13 @@ body {
     <div class="block tablet-up-6 laptop-up-4 desktop-up-2">
       <div class="card rounded-3 no-border">
         <div class="card__content">
-          <p class="skeleton" data-lines="9" data-animation="true"></p>
+          <div class="card__header flex--justify-center">
+            <div class="card__group">
+              <i class="pi-help-solid text--black"></i>
+              <h2 class="card__title text--black">Card Title</h2>
+            </div>
+          </div>
+          <p class="skeleton" data-lines="8" data-animation="true"></p>
         </div>
       </div>
     </div>
