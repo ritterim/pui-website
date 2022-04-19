@@ -20,73 +20,48 @@ body {
     <div class="block tablet-up-6 laptop-up-3 desktop-up-2">
       <div class="card rounded-3 no-border">
         <div class="card__content">
-          <p class="skeleton" data-lines="18"></p>
+          <p class="skeleton" data-lines="17" data-animation="true"></p>
         </div>
       </div>
     </div>
     <div class="block tablet-up-6 laptop-up-6 desktop-up-8">
-      <div class="card p-0 rounded-3 no-border">
-        <div class="card__content">
-          <div class="ct-chart"></div>
+      <div class="card rounded-3 no-border">
+        <div class="card__content h-100">
+          <div class="card__header flex--justify-center mt-3">
+            <div class="card__group">
+              <i class="pi-info-solid text--black"></i>
+              <h2 class="card__title text--black">Card Title</h2>
+            </div>
+          </div>
+          <div class="ct-chart h-75 mt-4"></div>
         </div>
       </div>
     </div>
     <div class="block tablet-up-6 laptop-up-3 desktop-up-2">
       <div class="card rounded-3 no-border">
-        <img class="card__image" src="/images/sun-flare.jpg" alt="sun"/>
+        <div class="cart__content h-100">
+          <div class="horizontal-bar-chart h-100"></div>
+        </div>
+      </div>
+    </div>
+    <div class="block tablet-up-6 laptop-up-4 desktop-up-2">
+      <div class="card rounded-3 no-border">
+        <div class="card__content h-100">
+          <div class="pie-chart h-100"></div>
+        </div>
+      </div>
+    </div>
+    <div class="block tablet-up-6 laptop-up-4 desktop-up-2">
+      <div class="card rounded-3 no-border">
         <div class="card__content">
-          <div class="flex flex--align-center mb-3">
-            <span>Temperature: 10,340 <span>&#176;</span> F</span>
-          </div>
-          <div class="flex flex--align-center my-3">
-            <span>Distance from: 91,406,842 mi</span>
-          </div>
-          <div class="flex flex--align-center my-3">
-            <span>Sunspots: 61</span>
-          </div>
+          <p class="skeleton" data-lines="9" data-animation="true"></p>
         </div>
       </div>
     </div>
     <div class="block tablet-up-6 laptop-up-4 desktop-up-2">
       <div class="card rounded-3 no-border">
-        <div class="card__content text--center flex flex--column flex--justify-center h-100">
-          <strong class="text--size-xl text-positive">74 <span>&#176;</span> F</strong>
-          <p>Cabin Temperature</p>
-          <strong class="text--size-xl text-negative">14 PSI</strong>
-          <p>Cabin Pressure</p>
-        </div>
-      </div>
-    </div>
-    <div class="block tablet-up-6 laptop-up-4 desktop-up-2">
-      <div class="card rounded-3 no-border">
-        <div class="card__content flex flex--column flex--justify-between h-100">
-          <button class="button button--navy py-2 px-7">Button</button>
-          <button class="button button--skyblue py-2 px-7">Button</button>
-          <button class="button button--peach py-2 px-7">Button</button>
-          <button class="button button--brown py-2 px-7">Button</button>
-        </div>
-      </div>
-    </div>
-    <div class="block tablet-up-6 laptop-up-4 desktop-up-2">
-      <div class="card rounded-3 no-border">
-        <div class="card__content text--center form">
-          <div class="card__header">
-            <div class="card__group">
-              <i class="pi-book text--black"></i>
-              <h2 class="card__title text--black">NASA Database</h2>
-            </div>
-          </div>
-          <label class="form__field has-icon--right">
-            <input type="text" placeholder="Type to search..."></input>
-            <i aria-hidden="true" class="pi-search text--black"></i>
-          </label>
-          <div class="text--left text--black">
-            <p class="mt-4">Search History</p>
-            <ul class="list">
-              <li class="list__item flex "><i aria-hidden="true" class="pi-search mr-2"></i>Where is Mars?</li>
-              <li class="list__item flex "><i aria-hidden="true" class="pi-search mr-2"></i>How to fly a spaceship?</li>
-            </ul>
-          </div>
+        <div class="card__content h-100">
+          <div class="donut-chart h-100"></div>
         </div>
       </div>
     </div>
@@ -100,10 +75,10 @@ body {
             </div>
           </div>
           <div class="message message--error text--left">
-            <p>Critical system malfunction!</p>
+            <p>Error message here</p>
           </div>
           <div class="message message--success text--left">
-            <p>The Eagle has landed.</p>
+            <p>Success message here</p>
           </div>
         </div>
       </div>
@@ -133,4 +108,43 @@ body {
       showGrid: false
     }
   });
+
+  new Chartist.Bar('.horizontal-bar-chart', {
+    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    series: [
+      [5, 4, 3, 7, 5, 10, 3],
+      [3, 2, 9, 5, 4, 6, 4]
+    ]
+  }, {
+    seriesBarDistance: 10,
+    reverseData: true,
+    horizontalBars: true,
+    axisY: {
+      offset: 70
+    }
+  });
+
+  var data = {
+    series: [5, 3, 4]
+  };
+  
+  var sum = function(a, b) { return a + b };
+  
+  new Chartist.Pie('.pie-chart', data, {
+    labelInterpolationFnc: function(value) {
+      return Math.round(value / data.series.reduce(sum) * 100) + '%';
+    }
+  });
+
+  new Chartist.Pie('.donut-chart', {
+    series: [20, 10, 30, 40]
+  }, {
+    donut: true,
+    donutWidth: 60,
+    donutSolid: true,
+    startAngle: 270,
+    showLabel: true
+  });
+
+  
 </script>
