@@ -1,5 +1,0 @@
-<tr>
-  <td data-label="Class"><code>{{ .Get "class"}}</code></td>
-  {{ with .Get "attr" }}<td data-label="Attribute"><code>{{ . }}</code></td>{{ end }}
-  {{ with .Get "result" }}<td data-label="Result">{{ . | markdownify }}</td>{{ end }}
-</tr>

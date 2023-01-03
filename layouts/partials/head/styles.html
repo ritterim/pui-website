@@ -1,8 +1,0 @@
-
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
-{{ if .Page.Params.SkellyCSS }}
-<link rel="stylesheet" href="https://unpkg.com/@ritterim/skellycss/dist/style.css">
-{{ end }}
-<link rel="stylesheet" href="https://unpkg.com/@ritterim/platform-ui/dist/platform-ui.min.css">
-{{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
