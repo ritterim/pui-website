@@ -1754,7 +1754,7 @@ const $$Astro$z = createAstro("/Library/WebServer/Documents/sites/pui-website/sr
 const $$GtmHead = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$z, $$props, $$slots);
   Astro2.self = $$GtmHead;
-  return renderTemplate(_a$2 || (_a$2 = __template$2(["<!-- Google Tag Manager --><script async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(`window,document,'script','dataLayer','${ site.gtmID }'`);<\/script>\n<!-- End Google Tag Manager -->\n"], ["<!-- Google Tag Manager --><script async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(\\`window,document,'script','dataLayer','\\${ site.gtmID }'\\`);<\/script>\n<!-- End Google Tag Manager -->\n"])));
+  return renderTemplate(_a$2 || (_a$2 = __template$2(["<!-- Google Tag Manager --><script async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer',`${ site.gtmID }`);<\/script>\n<!-- End Google Tag Manager -->\n"], ["<!-- Google Tag Manager --><script async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,'script','dataLayer',\\`\\${ site.gtmID }\\`);<\/script>\n<!-- End Google Tag Manager -->\n"])));
 }, "/Library/WebServer/Documents/sites/pui-website/src/components/head/gtm-head.astro");
 
 const $$Astro$y = createAstro("/Library/WebServer/Documents/sites/pui-website/src/components/head/og.astro", "", "file:///Library/WebServer/Documents/sites/pui-website/");
@@ -1913,7 +1913,7 @@ const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$q, $$props, $$slots);
   Astro2.self = $$Footer;
   const nav = site.menu;
-  new Date().getFullYear();
+  const date = new Date().getFullYear();
   return renderTemplate`${maybeRenderHead($$result)}<footer class="background--light-purple inverted py-3 px-4 pos-rel">
     <div class="block-container blocks py-2 px-3">
         <div class="block lg-tablet-up-4">
@@ -1931,7 +1931,7 @@ const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
                 <a class="text--beige" href="https://github.com/ritterim/skellyCSS" rel="external noopener">github</a>
             </p>
             <p>Current version ${PuiVersion}</p>
-            <!-- <p class="mb-0">&copy;{date} {site.rim}</p> -->
+            <p class="mb-0">&copy;${date} ${site.rim}</p>
         </div>
         <div class="block lg-tablet-up-8">
             <div class="block-container tablet-up-2 lg-tablet-up-3 w-100 blocks p-2">
@@ -11593,7 +11593,7 @@ const $$CodeDemo = createComponent(async ($$result, $$props, $$slots) => {
 const MDXLayout$J = async function ({
   children
 }) {
-  const Layout = (await import('./chunks/landing.44bf87b9.mjs')).default;
+  const Layout = (await import('./chunks/landing.34e0b81f.mjs')).default;
   const {
     layout,
     ...content

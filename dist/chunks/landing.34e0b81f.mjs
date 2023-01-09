@@ -8,32 +8,7 @@ const $$Landing = createComponent(async ($$result, $$props, $$slots) => {
   Astro2.self = $$Landing;
   const { frontmatter, headings } = Astro2.props;
   return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "pageTitle": frontmatter.title }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<div class="block-container">
-  <div id="frame" class="block-container w-100 flex--justify-center">   
-    <!-- Mobile Nav & Trigger -->
-    <div id="frame-mobile-nav" class="hide:lg-tablet px-0">
-      <div class="block-container background--lighter flex--justify-end py-2 px-4">
-        <button class="button--plain flex flex--align-center flex--column drawer__open" data-drawer="frame-mobile-nav-drawer">
-          <i class="pi-menu pi-lg" aria-hidden="true"></i>
-          Docs
-        </button>
-      </div>
-      <div id="frame-mobile-nav-drawer" class="drawer drawer-left">
-        <div class="drawer__inner">
-          <div class="drawer__content p-0">
-            <div class="flex flex--justify-end mr-2">
-                <button class="button button--secondary has-text drawer__close mobile-menu-action m-2 pos-fix pin-right" data-drawer="frame-mobile-nav-drawer">
-                    Close
-                    <i class="pi-times" aria-hidden="true"></i>
-                </button>
-            </div>
-            <nav role="complementary">
-                <!-- <SidebarMenu /> -->
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-  
+  <div id="frame" class="block-container w-100 flex--justify-center">  
     <main id="frame-content" class="block-container w-100 lg-tablet-up-10">
       <article id="content" class="w-100 lg-tablet-up-9 laptop-up-10 px-4 pb-4">
         <h1 class="text--purple my-5">${frontmatter.title}</h1>
