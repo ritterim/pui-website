@@ -1,18 +1,19 @@
-.DS_Store
-.cache/
-.vscode/
+# build output
+dist/
+.output/
+
+# dependencies
 node_modules/
-resources/
-assets/js/platform-ui.min.js
-assets/css/platform-ui.min.css
-assets/output/
-static/css/
 
-# JetBrains Rider
-.idea/
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-.npm-version
-.pui-version
+# environment variables
+.env
+.env.production
 
-# Hugo Things
-.hugo_build.lock
+# macOS-specific files
+.DS_Store
