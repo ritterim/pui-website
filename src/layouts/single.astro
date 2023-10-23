@@ -10,7 +10,10 @@ const home = '/';
 const allPages = await Astro.glob('../pages/*');
 const allMd = await Astro.glob('../pages/docs/**/*.md');
 const allMdx = await Astro.glob('../pages/docs/**/*.mdx');
-const allFiles = allMd.concat(allMdx);
+const allFiles = [
+  ...allMd,
+  ...allMdx
+];
 ---
 <BaseLayout pageTitle={frontmatter.title} skelly={frontmatter.skellyCSS}>
   <div id="frame" class="block-container w-100">

@@ -3,3 +3,10 @@
 <script src="../../../../node_modules/@ritterim/platform-ui/dist/js/platform-ui.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@ritterim/skellycss/dist/skelly.js" crossorigin defer></script>
 <script src="/scripts/index.js" type="module" is:inline></script>
+
+<script is:inline src="/pagefind/pagefind-ui.js"></script>
+<script is:inline>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+</script> is:inline

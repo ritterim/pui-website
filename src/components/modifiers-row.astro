@@ -1,6 +1,5 @@
 ---
-import Markdown from '@astrojs/markdown-component';
-const { modifier, secondary, attr, behavior } = Astro.props;
+const { modifier, secondary, attr } = Astro.props;
 ---
 <tr>
   <td data-label="Modifier">
@@ -17,8 +16,6 @@ const { modifier, secondary, attr, behavior } = Astro.props;
     </td>
   ) : null}  
   <td data-label="Behavior">
-    <Markdown>
-      {behavior}
-    </Markdown>
+      <slot />
   </td>
 </tr>

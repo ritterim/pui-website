@@ -7,9 +7,7 @@ import Scripts from './partials/site/scripts.astro';
 import '../sass/main.scss';
 
 const { pageTitle, description, skelly } = Astro.props;
-export interface Props {
-	title: string;
-}
+
 const pathname = new URL(Astro.request.url).pathname;
 const home = '/';
 

@@ -14,10 +14,9 @@ import Modifiersrow from '../../../components/modifiers-row.astro'
 All block grids start with a wrapper of `block-container` that is `display: flex` with `flex-wrap: wrap` applied. Container modifiers, which affect all child blocks, allow auto-placement based on responsive breakpoints.
 
 <Modifiers>
-<Modifiersrow 
-  modifier="blocks"
-  behavior="When applied, margins and padding placed on the container are applied to all child blocks instead." 
-/>
+<Modifiersrow modifier="blocks">
+  When applied, margins and padding placed on the container are applied to all child blocks instead.
+</Modifiersrow>
 </Modifiers>
 
 <Blockgrid padding="blocks p-2" level="4">
@@ -144,18 +143,15 @@ Breakpoint classes can be added to each of these utilities as well. For example,
 
 
 <Modifiers>
-<Modifiersrow 
-  modifier="block--shrink"
-  behavior="`width: auto`" 
-/>
-<Modifiersrow 
-  modifier="block--fill"
-  behavior="`flex-grow: 1`" 
-/>
-<Modifiersrow 
-  modifier="block--full"
-  behavior="`width: 100%`" 
-/>
+  <Modifiersrow modifier="block--shrink">
+    `width: auto`
+  </Modifiersrow>
+  <Modifiersrow modifier="block--fill">
+    `flex-grow: 1`
+  </Modifiersrow>
+  <Modifiersrow modifier="block--full">
+    `width: 100%`
+  </Modifiersrow>
 </Modifiers>
 
 <Blockgrid level="4" padding="blocks p-2 tablet-up-3" >

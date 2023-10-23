@@ -8,8 +8,6 @@ import Classesrow from '../../../components/classes-row.astro'
 import Classes from '../../../components/classes.astro'
 import Codedemo from '../../../components/code-demo.astro'
 import Codemarkup from '../../../components/code-markup.astro'
-import Modifiersrow from '../../../components/modifiers-row.astro'
-import Modifiers from '../../../components/modifiers.astro'
 import Visualizer from '../../../components/visualizer.astro'
 
 ## [heading](#heading)
@@ -36,31 +34,30 @@ Why include a paragraph tag? Mostly to note that our paragraphs have a bottom ma
 ### [case](#case)
 
 <Classes result="true">
-<Classesrow 
-  classname="text--uppercase" 
-  result="Uppercase text." 
-/>
-<Classesrow 
-  classname="text--lowercase" 
-  result="Lowercase text." 
-/>
-<Classesrow 
-  classname="text--capitalize" 
-  result="Capitalize each first letter." 
-/>
+  <Classesrow classname="text--uppercase">
+    Uppercase Text.
+  </Classesrow>
+  <Classesrow classname="text--lowercase">
+    Lowercase text.  
+  </Classesrow>
+  <Classesrow classname="text--capitalize">
+    Capitalize each first letter.
+  </Classesrow>
 </Classes>
 
 ### [color](#color)
 
 <Classes result="true">
-<Classesrow 
-  classname="text--{ color }" 
-  result="Set text color using our [colors](link)." 
-/>
-<Classesrow 
-  classname="text-hover--{ color }" 
-  result="Set text hover color using our [colors](link)." 
-/>
+  <Classesrow classname="text--{ color }">
+
+    Set text color using our [colors](link).
+
+  </Classesrow>
+  <Classesrow classname="text-hover--{ color }">
+
+    Set text hover color using our [colors](link).
+
+  </Classesrow>
 </Classes>
 
 ### [sizing](#sizing)
@@ -79,29 +76,63 @@ Why include a paragraph tag? Mostly to note that our paragraphs have a bottom ma
 </Codedemo>
 
 <Classes result="true">
-<Classesrow classname="text--size-2xs" result=".422rem" />
-<Classesrow classname="text--size-xs" result=".563rem" />
-<Classesrow classname="text--size-sm" result=".75rem" />
-<Classesrow classname="text--size-base" result="1rem" />
-<Classesrow classname="text--size-md" result="1.333rem" />
-<Classesrow classname="text--size-lg" result="1.777rem" />
-<Classesrow classname="text--size-xl" result="2.369rem" />
-<Classesrow classname="text--size-2xl" result="3.157rem" />
-<Classesrow classname="text--size-3xl" result="4.209rem" />
+  <Classesrow classname="text--size-2xs">
+    .422rem
+  </Classesrow>
+  <Classesrow classname="text--size-xs">
+    .563rem
+  </Classesrow>
+  <Classesrow classname="text--size-sm">
+    .75rem
+  </Classesrow>
+  <Classesrow classname="text--size-base">
+    1rem
+  </Classesrow>
+  <Classesrow classname="text--size-md">
+    1.333rem
+  </Classesrow>
+  <Classesrow classname="text--size-lg">
+    1.777rem
+  </Classesrow>
+  <Classesrow classname="text--size-xl">
+    2.369rem
+  </Classesrow>
+  <Classesrow classname="text--size-2xl">
+    3.157rem
+  </Classesrow>
+  <Classesrow classname="text--size-3xl">
+    4.209rem
+  </Classesrow>
 </Classes>
 
 
 ### [general](#general)
    
 <Classes result="true">
-<Classesrow classname="text--bold" result="Bold text." />
-<Classesrow classname="text--underline" result="Underlined text." />
-<Classesrow classname="text--center" result="Centered text." />
-<Classesrow classname="text--right" result="Right-aligned text." />
-<Classesrow classname="text--left" result="Left-aligned text." />
-<Classesrow classname="text--nowrap" result="Set no-wrap on a line of text." />
-<Classesrow classname="text--italic" result="font-style: italic" />
-<Classesrow classname="text--normal" result="font-style: normal" />
+  <Classesrow classname="text--bold">
+    Bold text.
+  </Classesrow>
+  <Classesrow classname="text--underline">
+    Underlined text.
+  </Classesrow>
+  <Classesrow classname="text--center">
+    Centered text.
+  </Classesrow>
+  <Classesrow classname="text--right">
+    Right-aligned text.
+  </Classesrow>
+  <Classesrow classname="text--left">
+    Left-aligned text.
+  </Classesrow>
+  <Classesrow classname="text--nowrap">
+    Set no-wrap on a line of text.
+  </Classesrow>
+  <Classesrow classname="text--italic">
+    font-style: italic
+  </Classesrow>
+  <Classesrow classname="text--normal">
+    font-style: normal
+  </Classesrow>
 </Classes>
 
 <Visualizer header="Change the border-radius of the card">

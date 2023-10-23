@@ -9,8 +9,6 @@ import Codedemo from '../../../components/code-demo.astro'
 import Codemarkup from '../../../components/code-markup.astro'
 import Datarow from '../../../components/data-row.astro'
 import Data from '../../../components/data.astro'
-import Modifiersrow from '../../../components/modifiers-row.astro'
-import Modifiers from '../../../components/modifiers.astro'
 import Requiresjs from '../../../components/requires-js.astro'
 import Visualizer from '../../../components/visualizer.astro'
 
@@ -19,10 +17,9 @@ import Visualizer from '../../../components/visualizer.astro'
 The background color classes are used to set or change a `background--color` on a specific element. 
 
 <Classes>
-<Classesrow 
-  classname="background--{ color }"
-  result="Set background color using our [colors](link)."
-/>
+  <Classesrow classname="background--{ color }">
+    Set background color using our [colors](link).
+  </Classesrow>
 </Classes>
 
 <Visualizer header="Change the background color!" >
@@ -93,7 +90,9 @@ The background color classes are used to set or change a `background--color` on 
 ## [inverted](#inverted)
 
 <Classes result="true" >
-<Classesrow classname="inverted" result="Changes text color to white with a transition effect."/>
+  <Classesrow classname="inverted">
+    Changes text color to white with a transition effect.
+  </Classesrow>
 </Classes >
 
 ## [transparent](#transparent)
@@ -101,7 +100,9 @@ The background color classes are used to set or change a `background--color` on 
 Set background color and border color on an element to `transparent`.
 
 <Classes result="true" >
-<Classesrow classname="transparent" result="Set background color and border color on an element to transparent."/>
+  <Classesrow classname="transparent">
+    Set background color and border color on an element to transparent.
+  </Classesrow>
 </Classes >
 
 
@@ -115,7 +116,9 @@ Set background color and border color on an element to `transparent`.
 Sometimes you just don't have access to properly add a background image when you're using a static site generator. Now you can add background images using data attributes and Javascript.
 
 <Classes result="true" >
-<Classesrow classname="background-image" result="Set a background image with custom properties."/>
+<Classesrow classname="background-image">
+  Set a background image with custom properties.
+</Classesrow>
 </Classes >
 
 <Codedemo>
@@ -156,7 +159,9 @@ Sometimes you just don't have access to properly add a background image when you
 Create your own custom linear gradient using a class and data attributes! Yeah, that's right!
 
 <Classes result="true" >
-<Classesrow classname="linear-gradient" result="Custom linear-gradient."/>
+  <Classesrow classname="linear-gradient">
+    Custom linear-gradient.
+  </Classesrow>
 </Classes >
 
 <Data>
@@ -196,7 +201,9 @@ Create your own custom linear gradient using a class and data attributes! Yeah, 
 
 
 <Classes result="true" >
-<Classesrow classname="ratio-{ 1_1, 2_1, 4_3, 16_9 }" result="Set the size of an element equal to a common ratio: 1:1, 2:1, 4:3, 16:9"/>
+<Classesrow classname="ratio-{ 1_1, 2_1, 4_3, 16_9 }">
+  Set the size of an element equal to a common ratio: 1:1, 2:1, 4:3, 16:9
+</Classesrow>
 </Classes >
 
 <Codedemo>
