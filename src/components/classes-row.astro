@@ -1,6 +1,5 @@
 ---
-import Markdown from '@astrojs/markdown-component';
-const { classname, attr, result } = Astro.props;
+const { classname, attr } = Astro.props;
 ---
 <tr>
   <td data-label="Class">
@@ -11,7 +10,9 @@ const { classname, attr, result } = Astro.props;
       <code>{attr}</code>
     </td>
   ) : null}
-  {result ? (
-    <td data-label="Result"><Markdown>{result}</Markdown></td>
+  {Astro.slots?.default ? (
+    <td data-label="Result">
+      <slot />
+    </td>
   ) : null}
 </tr>

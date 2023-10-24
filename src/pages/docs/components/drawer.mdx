@@ -59,18 +59,20 @@ A drawer can easily be opened by setting `data-drawer` with the matching `id` of
 </Codemarkup>
 
 <Modifiers data="true" >
-<Modifiersrow 
-  modifier="drawer-{ top, left, right }"
-  attr="data-drawer"
-  behavior="`top`, `left`, `right` orientation. Bottom is default." 
-/>
-<Modifiersrow 
-  modifier="drawer--single-row"
-  attr="data-drawer"
-  behavior="A small drawer." 
-/>
+  <Modifiersrow 
+    modifier="drawer-{ top, left, right }"
+    attr="data-drawer">
+    `top`, `left`, `right` orientation. Bottom is default.
+  </Modifiersrow>
+  <Modifiersrow 
+    modifier="drawer--single-row"
+    attr="data-drawer">
+    A small drawer.
+  </Modifiersrow>
 </Modifiers >
 
 <Callout header="Drawer Tip" >
+
   <p>If the <code>header-fixed</code> class is added to the main wrapper, the side drawers will open below the header.</p>
+  
 </Callout >

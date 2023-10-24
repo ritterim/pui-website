@@ -1,5 +1,4 @@
 ---
-import Markdown from "@astrojs/markdown-component";
 const {header} = Astro.props;
 ---
 
@@ -10,7 +9,7 @@ data-gradient-direction="30deg"
 data-gradient-start="midnightblue 20%, purple 40%"
 data-gradient-stop="indigo"
 data-gradient-fallback="indigo">
-  <Markdown>
+  
     <slot />
-  </Markdown>
+  
 </div>

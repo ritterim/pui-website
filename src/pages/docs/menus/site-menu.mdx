@@ -100,7 +100,9 @@ Our site menu was built to be used in the header as a main site navigation. If y
 </Codemarkup>
  
 <Callout header="link color">
-When using the utility `text--white` as a modifier on `site-menu`, all `site-menu__item` links inherit `text--white`.   
+
+When using the utility `text--white` as a modifier on `site-menu`, all `site-menu__item` links inherit `text--white`.  
+ 
 </Callout>
 
 
@@ -113,14 +115,12 @@ When using the utility `text--white` as a modifier on `site-menu`, all `site-men
 Sub-menus are accomplished via the `dropdown`.
 
 <Modifiers>
-<Modifiersrow
-  modifier="dropdown--centered" 
-  behavior="Centers content of the dropdown sub-menu." 
-/>
-<Modifiersrow 
-  modifier="dropdown--right" 
-  behavior="Justifies both the surrounding dropdown container and content to the right." 
-/>
+  <Modifiersrow modifier="dropdown--centered">
+  Centers content of the dropdown sub-menu.
+  </Modifiersrow>
+  <Modifiersrow modifier="dropdown--right">
+  Justifies both the surrounding dropdown container and content to the right.
+  </Modifiersrow>
 </Modifiers>
 
 <Codedemo>

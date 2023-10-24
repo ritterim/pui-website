@@ -16,9 +16,26 @@ const home = '/';
     )}
   </nav>
   <div class="h-100 text--white flex flex--justify-end flex--align-center">
+    <button class="button button--secondary has-text mr-2 modal__open" data-button-text="Search Docs" data-modal="search-modal">
+      <i class="pi-search" aria-hidden="true"></i>
+    </button>
     <span class="hide show:tablet mr-2">v<PuiVersion/></span>
     <a href={site.rimdev_url} rel="external noopener" target="_blank" class="text--white" aria-label="RIMdev Blog">
       <i class="pi-rimdev-circle pi-xl text-hover--skyblue transition" aria-hidden="true"></i>
     </a>
+  </div>
+  <div id="search-modal" class="modal">
+    <div class="modal__inner rounded-3">
+      <div class="modal__header rounded-3 background--white">
+        <button class="button modal__close" data-modal="search-modal">
+          Close 
+          <i class="pi-times"></i>
+        </button>
+        <h2>Search Docs</h2>
+      </div>
+      <div class="modal__content">
+        <div id="search"></div>
+      </div>
+    </div>
   </div>
 </header>
