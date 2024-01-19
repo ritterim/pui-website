@@ -8,6 +8,7 @@ This is the website for [Platform UI](https://github.com/ritterim/platform-ui). 
 * dev: https://polite-water-090c8b210.2.azurestaticapps.net
 
 ## To run:
+* `$ npm install`
 * `$ npm run build`
 * `$ npm start`
 
